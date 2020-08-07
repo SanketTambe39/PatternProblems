@@ -1,14 +1,14 @@
 #!/bin/bash -x
 
-echo "Enter your first name :"
+read -p "Enter your First name :" firstName
+read -p "Enter your Last name :" lastName
 
-	read firstName
+namepattern="^([[:upper:]]{1})([[:lower:]]{2})([a-z]*)$"
 
-	pattern="^([[:upper:]]{1})([[:lower:]]{2})([a-z]*)$"
+if [[ $firstName =~ $namepattern && $lastName =~ $namepattern  ]]
+then
+	echo " Your name is perfect "
+else
+	echo " Check your Name both should be start with upper case. "
+fi
 
-	if [[ $firstName =~ $pattern ]]
-	then
-		echo "First Name is valid"
-	else
-		echo "First Name is invalid"
-	fi
