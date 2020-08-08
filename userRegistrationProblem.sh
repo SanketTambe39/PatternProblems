@@ -37,9 +37,7 @@ else
         echo "Mobile number is invalid"
 fi
 
-pwdValidation="^[a-z]{8,}$"
-
-if [[ $password =~ $pwdValidation ]]
+if [[ ${#password} -ge 8 && "$password" == *[[:lower:]]* && "$password" == *[[:upper:]]* ]]
 then
         echo "Password Requriments are fullfilled"
 else
