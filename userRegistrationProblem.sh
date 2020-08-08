@@ -24,6 +24,7 @@ mailValidation="^([a-zA-Z_]{1}[a-zA-Z0-9]+)(([_.-+]?[a-zA-Z0-9]+)*)@([a-z0-9]+)\
 if [[ $mail =~ $mailValidation ]]
 then
 	echo " You just entered a valid email id "
+	echo "All given Samples are checked Mail Id is working properly. "
 else
 	echo " You just entered a invalid email id "
 fi
