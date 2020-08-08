@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 read -p "Enter your First name :: " firstName
 read -p "Enter your Last name :: " lastName
@@ -37,7 +37,7 @@ else
         echo "Mobile number is invalid"
 fi
 
-if [[ ${#password} -ge 8 && "$password" == *[[:lower:]]* && "$password" == *[[:upper:]]* && "$password" == *[0-9]* ]]
+if [[ ${#password} -ge 8 && "$password" == *[[:lower:]]* && "$password" == *[[:upper:]]* && "$password" == *[0-9]* && "$password" == *([[@#^*%]]{1})* ]]
 then
         echo "Password Requriments are fullfilled"
 else
