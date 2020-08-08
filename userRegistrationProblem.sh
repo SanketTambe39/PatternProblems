@@ -7,6 +7,8 @@ read -p "Please Enter vaild email address ::" mail
 
 read -p "Enter Mobile Number (Ex. +91 8467512486 ) ::" num
 
+read -p "Enter password ::" password
+
 
 nameValidation="^([[:upper:]]{1})([[:lower:]]{2})([a-z]*)$"
 
@@ -26,11 +28,20 @@ else
 	echo " You just entered a invalid email id "
 fi
 
-pattern3="^[+]{1}[0-9]{1,3}[ ]{1}[0-9]{10}$"
+numberValidation="^[+]{1}[0-9]{1,3}[ ]{1}[0-9]{10}$"
 
 if [[ $num =~ $pattern3 ]]
 then
         echo "Mobile number is valid"
 else
         echo "Mobile number is invalid"
+fi
+
+pwdValidation="^[a-z]{8,}$"
+
+if [[ $password =~ $pwdValidation ]]
+then
+        echo "Password Requriments are fullfilled"
+else
+        echo "Password Requriments are not completed "
 fi
